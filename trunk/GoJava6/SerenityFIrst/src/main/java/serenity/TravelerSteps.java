@@ -1,8 +1,10 @@
 package serenity;
 
+import jxl.common.Assert;
 import net.thucydides.core.annotations.Step;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+
 
 /**
  * Created by Oleksandra_Dmytrenko on 9/18/2015.
@@ -33,5 +35,5 @@ public class TravelerSteps {
 
     @Step
     public void traveller_should_have_a_status_of(Status expectedStatus) {
-        assertThat(frequentFlyer.getStatus().isEqualTo(expectedStatus));
+        Assert.verify(frequentFlyer.getStatus().equals(expectedStatus));
     }}
